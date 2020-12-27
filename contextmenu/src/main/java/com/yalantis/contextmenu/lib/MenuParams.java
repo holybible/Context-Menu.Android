@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @property [animationDelay]
+ * property [animationDelay]
  * Delay after opening and before closing.
  * @see ContextMenuDialogFragment
  *
- * @property [isClosableOutside]
+ * property [isClosableOutside]
  * If option menu can be closed on touch to non-button area.
  *
- * @property [gravity]
+ * property [gravity]
  * You can change the side. By default - MenuGravity.END
  * @see MenuGravity
  */
