@@ -2,6 +2,9 @@
 
 # ContextMenu 
 
+#### Upstream Repo
+Check Yalantis Original Repo [Yalantis Repo](https://github.com/Yalantis/Context-Menu.Android)
+
 #### You can easily add awesome animated context menu to  your app. 
 
 Check this [project on dribbble](https://dribbble.com/shots/1785274-Menu-Animation-for-Additional-Functions?list=users&offset=17)

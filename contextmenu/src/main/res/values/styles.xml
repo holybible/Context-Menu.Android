@@ -2,12 +2,12 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="YCTMAppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@android:color/white</item>
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="MenuFragmentStyle" parent="AppTheme">
+    <style name="YCTMMenuFragmentStyle" parent="YCTMAppTheme">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:colorForeground">@android:color/transparent</item>
         <item name="android:colorForegroundInverse">@android:color/transparent</item>
@@ -16,10 +16,10 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <style name="TextView" />
+    <style name="YCTMTextView" />
 
-    <style name="TextView.DefaultStyle">
+    <style name="YCTMTextView.DefaultStyle">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">@dimen/menu_text_size</item>
+        <item name="android:textSize">@dimen/yctm_menu_text_size</item>
     </style>
 </resources>

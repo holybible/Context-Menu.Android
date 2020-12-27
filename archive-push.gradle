@@ -1,0 +1,31 @@
+apply plugin: 'maven'
+
+uploadArchives {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    repositories {
+        boolean byIyuba = false
+        if (project.hasProperty('iyuba')) {
+            byIyuba = project.getProperties().get('iyuba').toBoolean()
+        }
+        def username = properties.getProperty(byIyuba ? "iyubaUsername" : "localUsername")
+        def password = properties.getProperty(byIyuba ? "iyubaPassword" : "localPassword")
+        def snapshotRepo = byIyuba ? "${iyubaSnapshot}" : "${localSnapshot}"
+        def repo = byIyuba ? "${iyubaRelease}" : "${localRelease}"
+        mavenDeployer {
+            snapshotRepository(url: snapshotRepo) {
+                authentication(userName: username, password: password)
+            }
+            repository(url: repo) {
+                authentication(userName: username, password: password)
+            }
+            pom {
+                project {
+                    packaging 'aar'
+                    name project.name
+                }
+            }
+        }
+    }
+}
